@@ -1,0 +1,231 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(main.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    color:#fff;
+    font-size: 40px;
+    cursor:pointer;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color:#fff;
+    text-transform: uppercase;
+
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0px 20px;
+    position: relative;
+}
+.navbar ul li ::after{
+    content:'';
+    height: 3px;
+    width: 0%;
+    background-color: #01463f;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+
+}
+.navbar ul li a:hover ::after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color:#fff;
+}
+.content h1{
+    font-size: 70px;
+    margin-top:80px ;
+}
+.content p{
+    margin: 20px auto ;
+    font-weight: 100;
+    line-height: 25px;
+}
+.btn1 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    width: 200px;
+    padding: 5px;
+    border-radius: 60px;
+    border: 1px black solid;
+    background: transparent;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: blanchedalmond;
+    color:#333;
+}
+.btn2{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left:33%;
+    top: 75%;
+    width: 200px;
+    padding: 5px;
+    border-radius: 60px;
+    border: 1px black solid;
+    background-color: blanchedalmond;
+    color:#333;
+    font-size: 15px;
+    font-weight: bold;
+}
+.btn1:hover{
+
+    background: transparent;
+    color:#fff;
+}
+.btn2:hover{
+
+    background: transparent;
+    color:#fff;
+}
+span{
+    background:#01463f ;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+@media screen and (max-width:1124px)
+{
+    .navbar .nav.active {
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+       
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar .nav{
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+        visibility: hidden;
+        opacity: 0;
+        background-color: #111;
+       }
+       .navbar .nav.active{
+        visibility: visible;
+        opacity: 1;
+       }
+       .navbar ul li a {
+        display: inline-block;
+        color: #111;
+        font-weight: 400;
+        margin-left: 0px;
+        text-decoration: none;
+        font-size: 2em;
+        margin: 10px 0;
+        color:#fff;
+    }
+       .navbar ul li a:hover{
+        color:#ed0223;
+       }
+       .toggle{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(menu.png);
+        background-position: center;
+        background-size:30px;
+        background-repeat: no-repeat;
+        z-index: 2;
+        cursor: pointer;
+       }
+       .toggle.active{
+        background: url(close.png);
+        background-position: center;
+        background-size:25px;
+        background-repeat: no-repeat;
+       }
+    .btn2{
+        left:52%;
+    }
+    .btn1{
+        left: 27%;
+    }
+}
+@media screen and (max-width:840px){
+    ul{
+        font-size: 15px;
+
+    }
+}
+@media screen and (max-width:732px)
+{
+    .btn2{
+        left:56%;
+    }
+    .btn1{
+        left: 16%;
+    }
+    .navbar {
+        width: 98%;
+    }
+}
+@media screen and(max-width:375px) {
+   .btn{
+    position: relative;
+    top: 62%;
+    left: -11%;
+
+   } 
+    .btn1 {
+        left: 22%;
+        width: 140px;
+    }
+    .btn2 {
+        left: 56%;
+        width: 140px;
+        margin-left: 36px;
+    }
+    ul{
+        flex-direction: column;
+    }
+}  
